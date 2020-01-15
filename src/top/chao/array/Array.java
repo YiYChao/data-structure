@@ -76,6 +76,16 @@ public class Array<E> {
         return data[index];
     }
 
+    // 获取数组的第一个元素
+    public E getFirst(){
+        return get(0);
+    }
+
+    // 获取数组的最后一个元素
+    public E getLast(){
+        return get(size -1);
+    }
+
     // 修改数组中指定位置的元素
     public void set(int index, E e){
         // 首先判断数组的索引是否超出范围
