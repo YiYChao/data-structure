@@ -11,7 +11,6 @@ public class Array<E> {
     private int size;   // 记录数组元素的个数
 
     // 有参构造函数，定义数字的大小
-
     public Array(int capacity){
         this.data = (E[]) new Object[capacity];    // 此处绕了一个弯
     }
@@ -19,6 +18,15 @@ public class Array<E> {
     // 无参构造函数
     public Array(){
         this(10);
+    }
+
+    // 传入构造函数的数组
+    public Array(E[] arr){
+        data = (E[]) new Object[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            data[i] = arr[i];
+        }
+        size = arr.length;
     }
 
     // 获取数组中元素的个数
@@ -163,6 +171,15 @@ public class Array<E> {
             newDate[i] = data[i];
         }
         data = newDate;
+    }
+
+    // 交换指定位置的两个元素
+    public void swap(int m, int n){
+        if (m < 0 || m >= size || n < 0 || n >= size)
+            throw new IllegalArgumentException("Index out of range,swap failed!");
+        E tmp = data[m];
+        data[m] = data[n];
+        data[n] = tmp;
     }
 
 
