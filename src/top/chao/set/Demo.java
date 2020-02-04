@@ -1,5 +1,7 @@
 package top.chao.set;
 
+import top.chao.avl.AVLSet;
+
 import java.util.ArrayList;
 
 public class Demo {
@@ -30,5 +32,11 @@ public class Demo {
         LinkedListSet<String> linkedListSet = new LinkedListSet<>();
         double time2 = testSet(linkedListSet, filename);
         System.out.println("Linked List Set: " + time2 + " s");
+        System.out.println();
+
+        AVLSet<String> avlSet = new AVLSet<>();
+        double time3 = testSet(avlSet, filename);
+        System.out.println("AVL Set: " + time3 + " s");
+        System.out.println();
     }
 }
