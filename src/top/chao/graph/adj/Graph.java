@@ -50,7 +50,7 @@ public class Graph {
     }
 
     // 验证邻接表相关参数的有效性
-    private void validateVertex(int v) {
+    public void validateVertex(int v) {
         if (v < 0 || v >= V)
             throw new IllegalArgumentException("Vertex" + v + " is invalid");
     }

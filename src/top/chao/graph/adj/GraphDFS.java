@@ -19,7 +19,7 @@ public class GraphDFS {
     public GraphDFS(Graph graph) {
         this.graph = graph;     // 设置图
         visited = new boolean[graph.V()];   // 设置包含顶点多的个数的数组，记录节点是否被访问
-        for (int i = 0; i < graph.V(); i++) {   // 解决
+        for (int i = 0; i < graph.V(); i++) {   // 解决含有多个连通分量的情况
             if (!visited[i]){
                 dfs(i);
             }
